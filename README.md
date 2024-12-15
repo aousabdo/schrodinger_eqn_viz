@@ -32,7 +32,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/quantum-wave-explorer.git
+git clone https://github.com/aousabdo/quantum-wave-explorer.git
 
 # Navigate to project directory
 cd quantum-wave-explorer
@@ -103,7 +103,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by Dr. Aous A. Abdo
 
 *"Anyone who is not shocked by quantum theory has not understood it." - Niels Bohr*
 
