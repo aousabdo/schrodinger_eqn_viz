@@ -1,0 +1,63 @@
+:root {
+  --quantum-primary: #00b0ff;
+  --quantum-secondary: #1de9b6;
+  --quantum-bg: #0a192f;
+  --quantum-paper: #1a2c4e;
+  --quantum-text: #e6f1ff;
+  --quantum-text-secondary: #8892b0;
+  --quantum-grid: rgba(136, 146, 176, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--quantum-bg);
+  color: var(--quantum-text);
+}
+
+.visualization-container {
+  background: var(--quantum-paper);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.grid line {
+  stroke: var(--quantum-grid);
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.quantum-slider .MuiSlider-rail {
+  background-color: rgba(0, 176, 255, 0.2);
+}
+
+.quantum-slider .MuiSlider-track {
+  background-color: var(--quantum-primary);
+}
+
+.quantum-slider .MuiSlider-thumb {
+  background-color: var(--quantum-primary);
+  box-shadow: 0 0 10px rgba(0, 176, 255, 0.5);
+}
+
+.quantum-paper {
+  background: var(--quantum-paper) !important;
+  color: var(--quantum-text) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+.glow-text {
+  color: var(--quantum-text);
+  text-shadow: 0 0 10px rgba(0, 176, 255, 0.5);
+}
+
+.equation {
+  font-family: 'math';
+  color: var(--quantum-primary);
+  text-shadow: 0 0 5px rgba(0, 176, 255, 0.3);
+}
