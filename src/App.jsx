@@ -9,6 +9,7 @@ import EnergyLevels from './components/EnergyLevels';
 import PotentialSelector from './components/PotentialSelector';
 import { theme } from './theme';
 import { ErrorBoundary } from 'react-error-boundary';
+import QuantumExplanation from './components/QuantumExplanation';
 
 function ErrorFallback({error}) {
   return (
@@ -75,6 +76,18 @@ function App() {
                 quantumNumber={quantumNumber}
                 potentialType={potentialType}
               />
+              <Box sx={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 3, alignItems: 'start' }}>
+                <QuantumExplanation
+                  quantumNumber={quantumNumber}
+                  potentialType={potentialType}
+                />
+                <Box sx={{ width: '300px' }}>
+                  <EnergyLevels 
+                    quantumNumber={quantumNumber}
+                    potentialType={potentialType}
+                  />
+                </Box>
+              </Box>
             </Box>
             
             <Box sx={{ width: '300px' }}>
@@ -85,10 +98,6 @@ function App() {
               <QuantumControls 
                 quantumNumber={quantumNumber}
                 setQuantumNumber={setQuantumNumber}
-              />
-              <EnergyLevels 
-                quantumNumber={quantumNumber}
-                potentialType={potentialType}
               />
             </Box>
           </Box>
