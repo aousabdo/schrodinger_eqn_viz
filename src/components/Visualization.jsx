@@ -215,14 +215,18 @@ export default function Visualization({ quantumNumber, potentialType }) {
         const xValue = xScale.invert(x);
         const point = points.find(p => Math.abs(p.x - xValue) < 0.01);
         if (point) {
-          tooltip.transition()
+          const [mouseX, mouseY] = d3.pointer(event, document.body);
+          tooltip
+            .style('left', `${mouseX + 15}px`)
+            .style('top', `${mouseY - 15}px`)
+            .transition()
             .duration(200)
             .style('opacity', .9);
           tooltip.html(`
-            x: ${point.x.toFixed(3)}<br/>
-            ψ: ${point.wavefunction.toFixed(3)}<br/>
-            |ψ|²: ${point.probability.toFixed(3)}<br/>
-            V: ${point.potential.toFixed(3)}
+            <strong>Position:</strong> ${point.x.toFixed(3)}<br/>
+            <strong>Wave Function (ψ):</strong> ${point.wavefunction.toFixed(3)}<br/>
+            <strong>Probability (|ψ|²):</strong> ${point.probability.toFixed(3)}<br/>
+            <strong>Potential V(x):</strong> ${point.potential.toFixed(3)}
           `);
         }
       })

@@ -61,3 +61,17 @@ body {
   color: var(--quantum-primary);
   text-shadow: 0 0 5px rgba(0, 176, 255, 0.3);
 }
+
+.tooltip {
+  position: absolute;
+  background: rgba(13, 28, 51, 0.95);
+  border: 1px solid #00b0ff;
+  border-radius: 4px;
+  padding: 12px;
+  color: #e6f1ff;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  max-width: 200px;
+}

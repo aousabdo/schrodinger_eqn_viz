@@ -56,6 +56,18 @@ function App() {
     });
   };
 
+  const DEFAULT_STATE = {
+    quantumNumber: 1,
+    potentialType: 'harmonic',
+    time: 0
+  };
+
+  const handleReset = () => {
+    setQuantumNumber(DEFAULT_STATE.quantumNumber);
+    setPotentialType(DEFAULT_STATE.potentialType);
+    setTime(DEFAULT_STATE.time);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -96,6 +108,7 @@ function App() {
               <PotentialSelector
                 selectedPotential={potentialType}
                 onPotentialChange={setPotentialType}
+                onReset={handleReset}
               />
               <QuantumControls 
                 quantumNumber={quantumNumber}
