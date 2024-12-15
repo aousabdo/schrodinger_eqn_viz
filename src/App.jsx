@@ -72,11 +72,13 @@ function App() {
                 quantumNumber={quantumNumber}
                 potentialType={potentialType}
               />
-              <WaveFunctionInfo 
-                quantumNumber={quantumNumber}
-                potentialType={potentialType}
-              />
-              <Box sx={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 3, alignItems: 'start' }}>
+              <Box sx={{ mt: 2 }}>
+                <WaveFunctionInfo 
+                  quantumNumber={quantumNumber}
+                  potentialType={potentialType}
+                />
+              </Box>
+              <Box sx={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 2, alignItems: 'start' }}>
                 <QuantumExplanation
                   quantumNumber={quantumNumber}
                   potentialType={potentialType}
